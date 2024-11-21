@@ -1,0 +1,20 @@
+.accordianItem {
+    width: 50%;
+    margin: auto;
+    background-color: grey;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.accordianHeader{
+    padding: .5em;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.accordianContent{
+    padding: 1em;
+    background-color: rgb(188, 187, 187);
+}
