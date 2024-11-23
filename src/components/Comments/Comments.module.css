@@ -1,0 +1,13 @@
+.commentBox{
+    display: flex;
+    font-size: 14px;
+    padding: .5em 1em;
+    gap: 1em;
+    border-left: 1px solid black;
+}
+
+.userProfile img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
