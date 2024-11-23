@@ -1,25 +1,30 @@
 import { NavLink } from "react-router-dom";
-import "./Header.module.css";
+import styles from "./Header.module.css";
+
+const NAV_LINKS = [
+  { to: "/", label: "Accordian" },
+  { to: "/nested-comments", label: "Nested Comments" },
+  { to: "/image-slider", label: "Image Slider" },
+  { to: "/live-stream", label: "YT Live Stream" },
+  { to: "/search-auto-complete", label: "Search Bar" },
+];
 
 const Header = () => {
+  const getNavLinkStyle = ({ isActive, isPending, isTransitioning }) => ({
+    fontWeight: isActive ? "bold" : "",
+    color: isPending ? "grey" : "white",
+    viewTransitionName: isTransitioning ? "slide" : "",
+  });
+
   return (
-    <ul>
-      <NavLink
-        to="/"
-        style={({ isActive, isPending, isTransitioning }) => {
-          return {
-            fontWeight: isActive ? "bold" : "",
-            color: isPending ? "grey" : "white",
-            viewTransitionName: isTransitioning ? "slide" : "",
-          };
-        }}
-      >
-        Accordian
-      </NavLink>
-      <NavLink to="/nested-comments">Nested Comments</NavLink>
-      <NavLink to="/image-slider">Image Slider</NavLink>
-      <NavLink to="/live-stream">YT Live stream</NavLink>
-      <NavLink to="/search-auto-complete">Search bar</NavLink>
+    <ul className={styles.navList}>
+      {NAV_LINKS.map((link) => (
+        <li key={link.to}>
+          <NavLink to={link.to} style={getNavLinkStyle}>
+            {link.label}
+          </NavLink>
+        </li>
+      ))}
     </ul>
   );
 };

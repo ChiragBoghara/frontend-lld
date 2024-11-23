@@ -1,0 +1,12 @@
+.slider{
+    display: flex;
+    padding: 5em;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+img{
+    height: 250px;
+    width: 300px;
+}
