@@ -1,0 +1,11 @@
+.memes{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.meme-box{
+    height: 300px;
+    width: 300px;
+}

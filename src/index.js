@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Accordian from "./pages/accordian/accordian";
 import NestedComments from "./pages/nested-comments/NestedComments";
-import { ImageSlider } from "./components";
+import { ImageSlider, InfiniteScroll, AutoComplete } from "./components";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +23,14 @@ const router = createBrowserRouter([
       {
         path:"/image-slider",
         element: <ImageSlider/>
+      },
+      {
+        path:"/infinite-scroll",
+        element: <InfiniteScroll/>
+      },
+      {
+        path:"/auto-complete",
+        element: <AutoComplete/>
       }
     ],
   },

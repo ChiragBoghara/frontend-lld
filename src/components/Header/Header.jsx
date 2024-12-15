@@ -6,7 +6,8 @@ const NAV_LINKS = [
   { to: "/nested-comments", label: "Nested Comments" },
   { to: "/image-slider", label: "Image Slider" },
   { to: "/live-stream", label: "YT Live Stream" },
-  { to: "/search-auto-complete", label: "Search Bar" },
+  { to: "/infinite-scroll", label: "Infinite Scroll" },
+  { to: "/auto-complete", label: "Auto Complete" },
 ];
 
 const Header = () => {
